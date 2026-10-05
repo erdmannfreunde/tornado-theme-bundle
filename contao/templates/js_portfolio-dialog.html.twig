@@ -1,0 +1,15 @@
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Referenzen im Dialog (layout/tornado-theme/js/portfolio-dialog.js). Die
+ * Beschriftung des Schließen-Buttons kommt aus der Contao-Übersetzung.
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+{% set src = theme_js('portfolio-dialog.js') %}
+
+{% if src %}
+  <script src="{{ src }}" data-close-label="{{ 'MSC.close'|trans([], 'contao_default') }}"></script>
+{% endif %}

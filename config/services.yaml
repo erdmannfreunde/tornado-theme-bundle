@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  # Insert-Tags (#[AsInsertTag]) automatisch registrieren
+  ErdmannFreunde\TornadoThemeBundle\InsertTag\:
+    resource: '../src/InsertTag/'
+
+  # Content-Element-Controller (#[AsContentElement]) automatisch registrieren
+  ErdmannFreunde\TornadoThemeBundle\Controller\:
+    resource: '../src/Controller/'

@@ -1,0 +1,29 @@
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Kachel der Referenzen-Liste im Markup einer Galerie-Kachel: Bild, darunter
+ * der Titel als Link zur Leser-Seite. .gallery--references streckt den Link
+ * über die ganze Kachel (components/_media.scss). Ohne Inhaltselemente am
+ * Eintrag gibt es keine Leser-Seite und deshalb keinen Link. Leitet der Eintrag
+ * weiter (Quelle Seite, Artikel oder externe URL), ist hasText kein Callable,
+ * und der Link führt auf das Weiterleitungsziel.
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+<div class="layout_short portfolio{{ class }}" data-category="{{ categories|default }}">
+    <figure>
+        {% if addImage %}
+            {{ include('@Contao/picture_default.html.twig', picture|merge({title: null}), false) }}
+        {% endif %}
+        {% set linked = hasText is same as(false) ? (source|default('default') != 'default') : hasText.invoke() %}
+        <figcaption>
+            {% if linked %}
+                <a href="{{ link }}">{{ headline }}</a>
+            {% else %}
+                {{ headline }}
+            {% endif %}
+        </figcaption>
+    </figure>
+</div>

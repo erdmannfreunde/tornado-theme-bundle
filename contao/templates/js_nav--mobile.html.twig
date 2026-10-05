@@ -1,0 +1,12 @@
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+{% set src = theme_js('navigation.js') %}
+
+{% if src %}
+  <script src="{{ src }}" data-submenu-label="Untermenü %s"></script>
+{% endif %}

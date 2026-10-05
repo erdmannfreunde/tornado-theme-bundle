@@ -1,0 +1,18 @@
+{% extends '@Contao/be_tinyMCE.html.twig' %}
+
+  {% block content_css %}
+    content_css: '/assets/tornado-theme/css/tinymce.css',
+    style_formats_merge: true,
+    style_formats: [
+      {title: 'Theme Styles', items: [
+        { title: 'Button Primary', selector: 'a', classes: 'btn btn--primary' },
+        { title: 'Button Secondary', selector: 'a', classes: 'btn btn--secondary' },
+        { title: 'Button Tertiary', selector: 'a', classes: 'btn btn--tertiary' },
+        { title: 'Text Lead', block: 'p', classes: 'text--lead', exact: true }
+      ]}
+    ],
+  {% endblock %}
+
+  {% block toolbar %}
+    toolbar: 'link unlink | image | bold italic | styles | bullist numlist outdent indent | undo redo | code',
+  {% endblock %}

@@ -1,0 +1,16 @@
+{% extends '@Contao/news_full.html.twig' %}
+
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Nur das Datum, ohne Autor. Das Format kommt aus „Datums- und Zeitformat“
+ * am Startpunkt.
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+
+{% block info %}
+    <p class="info"><time datetime="{{ datetime }}">{{ date }}</time></p>
+{% endblock %}

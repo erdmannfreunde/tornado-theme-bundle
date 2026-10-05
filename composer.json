@@ -1,0 +1,41 @@
+{
+  "name": "erdmannfreunde/tornado-theme-bundle",
+  "type": "contao-bundle",
+  "description": "Install TORNADO Theme dependencies via Contao Manager or Composer",
+  "keywords": [
+    "contao theme",
+    "contao",
+    "theme",
+    "tornado"
+  ],
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Dennis Erdmann",
+      "homepage": "https://erdmann-freunde.de"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "contao/core-bundle": "^5.7",
+    "nutshell-framework/nutshell": "^2.0",
+    "nutshell-framework/core-bundle": "^0.2",
+    "nutshell-framework/hero-element": "^1.2",
+    "nutshell-framework/card-element": "^1.0",
+    "nutshell-framework/contact-element": "^1.0",
+    "erdmannfreunde/onepage-navigation": "^2.3",
+    "erdmannfreunde/theme-toolbox": "^4.5",
+    "erdmannfreunde/contao-grid-bundle": "^2.0",
+    "erdmannfreunde/contao-ping-bundle": "^1.0",
+    "erdmannfreunde/portfoliobundle": "^5.0.13",
+    "erdmannfreunde/contao-swiper-pro-bundle": "^0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "ErdmannFreunde\\TornadoThemeBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "ErdmannFreunde\\TornadoThemeBundle\\ContaoManager\\Plugin"
+  }
+}

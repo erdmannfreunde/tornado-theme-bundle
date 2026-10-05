@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="contao/languages/en/tl_content.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_content.quote_text.0">
+        <source>Quote</source>
+        <target>Zitat</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_text.1">
+        <source>Enter the quote text.</source>
+        <target>Geben Sie den Zitattext ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_author.0">
+        <source>Author</source>
+        <target>Autor</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_author.1">
+        <source>Enter the name of the quoted person.</source>
+        <target>Geben Sie den Namen der zitierten Person ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_meta.0">
+        <source>Additional information</source>
+        <target>Zusatz</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_meta.1">
+        <source>Shown below the name, e.g. service and location.</source>
+        <target>Steht unter dem Namen, z. B. Leistung und Ort.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_rating.0">
+        <source>Rating</source>
+        <target>Bewertung</target>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_rating.1">
+        <source>Number of stars. Leave empty to show no rating.</source>
+        <target>Anzahl der Sterne. Leer lassen, um keine Bewertung anzuzeigen.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

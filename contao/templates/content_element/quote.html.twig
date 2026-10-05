@@ -1,0 +1,65 @@
+{% extends '@Contao/content_element/_base.html.twig' %}
+{% use '@Contao/component/_figure.html.twig' %}
+
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Zitat bzw. Kundenstimme (QuoteController): Sterne, Zitat, Name und
+ * Zusatzzeile. Die Sterne sind für Screenreader ein Bild mit Text
+ * („4 von 5 Sternen“).
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+
+{% set content_layout_attributes = attrs()
+    .addClass('media media--' ~ layout, layout and image)
+    .mergeWith(content_layout_attributes|default)
+%}
+
+{# By default we add the layout attributes to the wrapper element. If you want to
+ disable this behavior, set "default_content_layout" to false. #}
+{% set attributes = attrs(attributes|default)
+    .mergeWith(content_layout_attributes, default_content_layout is not defined or default_content_layout)
+%}
+
+{% block quote_media %}
+    {% if image %}
+        {% with {figure: image} %}{{ block('figure_component') }}{% endwith %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if layout != 'below' %}
+        {{ block('quote_media') }}
+    {% endif %}
+
+    <figure class="quote">
+        {% if quote_rating %}
+            <span class="quote__rating" role="img" aria-label="{{ 'MSC.quoteRating'|trans([quote_rating], 'contao_default') }}">
+                <span class="quote__stars">{% for i in 1..quote_rating %}★{% endfor %}</span>
+                {%- if quote_rating < 5 -%}
+                    <span class="quote__stars quote__stars--empty">{% for i in 1..(5 - quote_rating) %}☆{% endfor %}</span>
+                {%- endif -%}
+            </span>
+        {% endif %}
+
+        <blockquote class="quote__text">
+            {%- for paragraph in quote_paragraphs -%}
+                <p>{{ paragraph|raw }}</p>
+            {%- endfor -%}
+        </blockquote>
+
+        {% if quote_author or quote_meta %}
+            <figcaption class="quote__caption">
+                {%- if quote_author -%}<span class="quote__author">{{ quote_author }}</span>{%- endif -%}
+                {%- if quote_meta -%}<span class="quote__meta">{{ quote_meta }}</span>{%- endif -%}
+            </figcaption>
+        {% endif %}
+    </figure>
+
+    {% if layout == 'below' %}
+        {{ block('quote_media') }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="contao/languages/en/default.php" source-language="en">
+    <body>
+      <trans-unit id="CTE.quote.0">
+        <source>Quote</source>
+      </trans-unit>
+      <trans-unit id="CTE.quote.1">
+        <source>Adds a quote with author, rating and an optional image.</source>
+      </trans-unit>
+      <trans-unit id="MSC.quoteRating">
+        <source>%s out of 5 stars</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

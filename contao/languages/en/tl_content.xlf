@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="contao/languages/en/tl_content.php" source-language="en">
+    <body>
+      <trans-unit id="tl_content.quote_text.0">
+        <source>Quote</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_text.1">
+        <source>Enter the quote text.</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_author.0">
+        <source>Author</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_author.1">
+        <source>Enter the name of the quoted person.</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_meta.0">
+        <source>Additional information</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_meta.1">
+        <source>Shown below the name, e.g. service and location.</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_rating.0">
+        <source>Rating</source>
+      </trans-unit>
+      <trans-unit id="tl_content.quote_rating.1">
+        <source>Number of stars. Leave empty to show no rating.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

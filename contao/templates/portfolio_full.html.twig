@@ -1,0 +1,45 @@
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Referenz in der Leser-Ansicht. Dasselbe Markup steht auf der Leser-Seite und
+ * im Dialog (portfolio-dialog.js übernimmt es von der Seite). Fakten: Kunde
+ * (optional), Leistung aus den Kategorien, Jahr aus dem Datum. Das Bild
+ * ist nicht verlinkt, das Bundle würde sonst auf die Seite selbst verlinken.
+ * Die Kategorien kommen als fertige Liste (category_titles); category_models
+ * bleibt in Version 5.0.13 des Bundles leer.
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+<article class="layout_full portfolio{{ class }}">
+    <header class="portfolio__header">
+        <h1 class="portfolio__headline">{{ headline }}</h1>
+
+        <dl class="portfolio__facts">
+            {% if client %}
+                <div class="portfolio__fact"><dt>Kunde</dt><dd>{{ client }}</dd></div>
+            {% endif %}
+            {% if category_titles|default %}
+                <div class="portfolio__fact"><dt>Leistung</dt><dd>{{ category_titles|raw }}</dd></div>
+            {% endif %}
+            {% if timestamp %}
+                <div class="portfolio__fact"><dt>Jahr</dt><dd><time datetime="{{ timestamp|date('Y') }}">{{ timestamp|date('Y') }}</time></dd></div>
+            {% endif %}
+        </dl>
+    </header>
+
+    {% if addImage %}
+        <figure class="portfolio__image">
+            {{ include('@Contao/picture_default.html.twig', picture|merge({title: null}), false) }}
+        </figure>
+    {% endif %}
+
+    <div class="portfolio__content">
+        {% if hasText is not same as(false) and hasText.invoke() %}
+            {{ text|raw }}
+        {% elseif teaser|default %}
+            {{ teaser|raw }}
+        {% endif %}
+    </div>
+</article>

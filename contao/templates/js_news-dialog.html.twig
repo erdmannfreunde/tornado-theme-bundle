@@ -1,0 +1,17 @@
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Nachrichten im Dialog (layout/tornado-theme/js/dialog.js, dasselbe
+ * Skript wie für Referenzen). Für Referenzen gibt es js_portfolio-dialog,
+ * beide lassen sich im Seitenlayout einzeln aktivieren. Die Beschriftung des
+ * Schließen-Buttons kommt aus der Contao-Übersetzung.
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+{% set src = theme_js('dialog.js') %}
+
+{% if src %}
+  <script src="{{ src }}" data-dialog="news" data-close-label="{{ 'MSC.close'|trans([], 'contao_default') }}"></script>
+{% endif %}

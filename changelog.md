@@ -1,6 +1,11 @@
 # Changelog
 
-## 1.0.0-RC1 (unveröffentlicht)
+## 1.0.0-RC2
+
+- Neues JavaScript-Template `js_news-dialog`: Nachrichten öffnen wie Referenzen im Dialog, die Detailseite bleibt als Rückfall. Referenzen (`js_portfolio-dialog`) und Nachrichten lassen sich im Seitenlayout unabhängig voneinander aktivieren. Beide Templates laden dasselbe Skript und geben mit `data-dialog` an, welche Liste sie meinen.
+- Das Dialog-Skript des Themes heißt jetzt `dialog.js` statt `portfolio-dialog.js`. Die Templates brauchen die Theme-Dateien ab diesem Stand.
+
+## 1.0.0-RC1
 
 Erste Vorabversion des TORNADO Themes für Contao 5.7 LTS.
 

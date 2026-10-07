@@ -11,6 +11,12 @@
       <trans-unit id="MSC.quoteRating">
         <source>%s out of 5 stars</source>
       </trans-unit>
+      <trans-unit id="MSC.heroVideoPause">
+        <source>Pause video</source>
+      </trans-unit>
+      <trans-unit id="MSC.heroVideoPlay">
+        <source>Play video</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

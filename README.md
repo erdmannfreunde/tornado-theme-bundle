@@ -22,7 +22,7 @@ HIGHLIGHTS:
 - Referenzen öffnen im Dialog, die eigene Detailseite bleibt als Rückfall erhalten
 - Inhaltselement „Zitat“ für Kundenstimmen mit Sternebewertung
 - Farben, Schriften und Abstände über den Live-Editor der Theme Toolbox anpassbar
-- drei mitgelieferte Vorlagen: Kupfer, Signal und Tanne
+- drei mitgelieferte Vorlagen: Kobalt, Schiefer und Marmor
 - Styleguide mit allen Bausteinen und den passenden CSS-Klassen
 - Tastaturbedienung, sichtbarer Fokus und geprüfte Kontraste
 - vielseitige Anpassungsmöglichkeiten über SCSS

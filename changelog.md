@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-RC3
+
+- Neues JavaScript-Template `js_hero-video`: Ein Hero-Element mit Hintergrundvideo bekommt oben rechts einen Button zum Anhalten und Abspielen. Bei „Bewegung reduzieren“ startet das Video erst per Klick. Die Beschriftungen („Video anhalten“, „Video abspielen“) stehen in der Übersetzung des Bundles. Das Template lädt `hero-video.js` aus den Theme-Dateien.
+
 ## 1.0.0-RC2
 
 - Neues JavaScript-Template `js_news-dialog`: Nachrichten öffnen wie Referenzen im Dialog, die Detailseite bleibt als Rückfall. Referenzen (`js_portfolio-dialog`) und Nachrichten lassen sich im Seitenlayout unabhängig voneinander aktivieren. Beide Templates laden dasselbe Skript und geben mit `data-dialog` an, welche Liste sie meinen.

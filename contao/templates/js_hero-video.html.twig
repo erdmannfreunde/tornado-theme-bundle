@@ -1,0 +1,17 @@
+{#
+ * Erdmann & Freunde
+ * TORNADO Contao Theme
+ * flow-contao-themes.de/contao-themes/tornado
+ *
+ * Button zum Anhalten des Hintergrundvideos im Hero-Element
+ * (layout/tornado-theme/js/hero-video.js). Bei „Bewegung reduzieren“ startet
+ * das Video erst per Klick. Die Beschriftungen kommen aus der Übersetzung
+ * des Bundles.
+ *
+ * Lizenziert unter LGPL-3.0-or-later
+#}
+{% set src = theme_js('hero-video.js') %}
+
+{% if src %}
+  <script src="{{ src }}" data-pause-label="{{ 'MSC.heroVideoPause'|trans([], 'contao_default') }}" data-play-label="{{ 'MSC.heroVideoPlay'|trans([], 'contao_default') }}"></script>
+{% endif %}

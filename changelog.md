@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+Erste stabile Version des TORNADO Themes für Contao 5.7 LTS. Der Code entspricht 1.0.0-RC3.
+
 ## 1.0.0-RC3
 
 - Neues JavaScript-Template `js_hero-video`: Ein Hero-Element mit Hintergrundvideo bekommt oben rechts einen Button zum Anhalten und Abspielen. Bei „Bewegung reduzieren“ startet das Video erst per Klick. Die Beschriftungen („Video anhalten“, „Video abspielen“) stehen in der Übersetzung des Bundles. Das Template lädt `hero-video.js` aus den Theme-Dateien.
